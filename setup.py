@@ -9,7 +9,6 @@ from distutils import ccompiler
 from setuptools import setup
 from setuptools.dist import Distribution
 from setuptools.extension import Extension
-import numpy
 
 cwd = os.path.abspath(os.path.dirname(__file__))
 fftwdir = os.path.join(cwd, 'mpi4py_fft', 'fftw')
@@ -43,7 +42,6 @@ def get_include_dirs():
     for prefix in get_prefix_dirs():
         append(dirs, prefix, 'include', triplet)
         append(dirs, prefix, 'include')
-    dirs.append(numpy.get_include())
     return dirs
 
 def get_library_dirs():
