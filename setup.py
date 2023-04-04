@@ -25,7 +25,7 @@ def append(dirlist, *args):
 
 def get_prefix_dirs():
     dirs = []
-    for envvar in ('FFTW_ROOT', 'FFTW_DIR'):
+    for envvar in ('FFTW_ROOT', 'FFTW3_ROOT', 'FFTW_HOME', 'FFTW_DIR'):
         if envvar in os.environ:
             prefix = os.environ[envvar]
             append(dirs, prefix)
